@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 // Plugins
 import Components from 'unplugin-vue-components/vite'
 import Vue from '@vitejs/plugin-vue'
@@ -57,5 +58,9 @@ export default defineConfig({
         api: 'modern-compiler',
       },
     },
+  },
+  test: {
+    globals: true,
+    environment: 'jsdom',
   },
 })
